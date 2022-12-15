@@ -1,3 +1,5 @@
+@import url(assets\montserrat-webfont\webfonts\Montserrat-Light.woff);
+
 ul{
     margin-right: 16px;
 }
@@ -17,3 +19,14 @@ ul li a:hover {
     color: gray;
     transition: 0.6s;
 }
+
+h2{
+    font-weight: bold;    
+}
+
+h1{
+    font-weight: bold;
+    font-size: 80px; 
+    color: rgb(163, 162, 162);
+}
+
