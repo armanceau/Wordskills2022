@@ -3,9 +3,7 @@
     ?>
 
 <body>
-    
-
-    <div class="container">
+        <div class="container">
         <div style="text-align: center">
             <ul>
                 <li><a href="#" id="Tous">Tous</a></li>
@@ -15,7 +13,9 @@
             </ul>
         </div>
     </div>
+
     <br>
+
     <div class="container">
         <form method="POST">
                 <?php
@@ -36,7 +36,7 @@
                             
                                 echo "<div class=\"col-4\">";
 
-                                    echo "<div class=\"card\" style=\"width: 18rem;\">";
+                                    echo "<div class=\"card\" style=\"width: 25rem;\">";
                                         echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
                                         echo "<div class=\"card-body\">";
                                             echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
@@ -81,7 +81,7 @@
                     }
                 ?>               
                 </p>
-                <button type="button" class="rounded-pill bouton_contact"><a href="#"style="color:white">CONTACT</a></button>
+                <button type="button" class="rounded-pill bouton_contact">CONTACT</button>
             </div>       
         </div>
     </div>
@@ -149,26 +149,47 @@
     </div>
 
     <div class="container" style="margin-top: 100px">
-        <div class="row" style="text-align: center">
-                <h2>MON BLOG</h2>
+        <div >
+                <h2 style="text-align: center" >MON BLOG</h2>
                 <br>
-                <p style="color: gray">
+                <p style="color: gray; text-align: center;">
                     Mes avis sur les derenières tendances du Web 
                 </p>
-
-
+                <br>
+                <br>
                 <!--Récupération card blog-->
                 <?php
                     require 'sqlconnect.php';
 
                     $sql = 'SELECT * 
-                        FROM apropos 
+                        FROM article
+                        ORDER BY article_date DESC
+
                     ';
+                    echo "<div class=\"row\">";
                     $table = $connection->query($sql);
                     while ($ligne = $table->fetch()) {
-                        echo $ligne["apropos_description"];                    
-                    }
-                ?>               
+                                echo "<div class=\"col-4\">";
+                                    echo "<div class=\"card\" style=\"width: 25em;\">";
+                                    echo "<h7 class=\"card-header\" style=\"background-color: rgb(44, 44, 44); color:white;\">".$ligne["article_date"]."</h7>";
+                                        echo '<img class=\"card-img-top\" src="'.$ligne["article_image"].'"/>';
+                                        echo "<div class=\"card-body\">";
+                                            echo "<div class=\"card-title row\">";
+
+                                                echo "<div style=\"font-weight: bold\">".$ligne["article_title"];
+                                                echo "</div>";
+                                                echo "<br>";
+                                                echo "<br>";
+                                                echo "<div>".$ligne["article_description"];
+                                                echo "</div>";
+                                            echo "</div>";
+                                            echo "<br>";
+                                            echo '<button type="button" class="rounded-pill bouton_lire">LIRE</button>';
+                                        echo "</div>";
+                                    echo "</div>";
+                            echo "</div>";
+                    
+                    }  ?>           
     </div>
 
 

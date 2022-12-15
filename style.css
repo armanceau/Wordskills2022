@@ -33,22 +33,33 @@ h1{
 
 a {
     text-decoration:none;
+    color: white;
+}
+
+a:hover{
+    text-decoration:none;
+    color: rgb(44, 44, 44);
 }
 
 .bouton_contact{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: rgb(44, 44, 44); 
+    border-style: ridge;
+    border-width: 1px;
     border-color: rgb(44, 44, 44);
+    color: white;
 }
 
 .bouton_contact:hover{
-    padding-left: 30px;
-    padding-right: 30px;
-    background-color: gray;
+    background-color: white; 
+    border-color: rgb(44, 44, 44);
+    border-width: 1px;
+    border-style: ridge;
     transition: 0.6s;
+    color: rgb(44, 44, 44);
 }
 
 #blog{
@@ -82,4 +93,25 @@ a {
 
 .not_checked {
     color: gray;
+}
+
+.bouton_lire{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(44, 44, 44); 
+    border-style: ridge;
+    border-width: 1px;
+    border-color: rgb(44, 44, 44);
+    color: white;
+}
+
+.bouton_lire:hover{
+    background-color: white; 
+    border-color: rgb(44, 44, 44);
+    border-width: 1px;
+    border-style: ridge;
+    transition: 0.6s;
+    color: rgb(44, 44, 44);
 }
