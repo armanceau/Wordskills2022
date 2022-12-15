@@ -68,33 +68,41 @@
                 <h1>QUI SUIS-JE ?</h1>
                 <br>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac mattis nisi, gravida iaculis magna. 
-                Quisque tincidunt fermentum nunc ut efficitur. Aliquam sapien velit, congue sit amet convallis a, mollis 
-                at ligula. Aenean ultrices laoreet leo, eget mattis sem venenatis vitae. Cras feugiat aliquet quam, id 
-                rhoncus dui dictum id. Aliquam eros dui, vulputate et neque quis, tempor condimentum turpis. Nunc erat arcu, 
-                volutpat at libero pretium, aliquet consequat sem.                
+                <!--Récupération description a propos-->
+                <?php
+                    require 'sqlconnect.php';
+
+                    $sql = 'SELECT * 
+                        FROM apropos 
+                    ';
+                    $table = $connection->query($sql);
+                    while ($ligne = $table->fetch()) {
+                        echo $ligne["apropos_description"];                    
+                    }
+                ?>               
                 </p>
                 <button type="button" class="rounded-pill bouton_contact"><a href="#"style="color:white">CONTACT</a></button>
             </div>       
         </div>
     </div>
     
-    <div class="container" style="margin-top: 100px; text-align:center; background-color:rgb(44, 44, 44);">
-    <!--Récupération description commentaire-->
-    <p id="blog">
-        <?php
-            require 'sqlconnect.php';
 
-            $sql = 'SELECT * 
-                FROM commentaire 
-                /*AND projet.id_categorie=1;*/
-            ';
-            $table = $connection->query($sql);
-            while ($ligne = $table->fetch()) {
-                echo $ligne["commentaire_description"];                    
-            }
-        ?>
-    </p>
+    <div class="container" style="margin-top: 100px; text-align:center; background-color:rgb(44, 44, 44);">
+        <!--Récupération description commentaire-->
+        <p id="blog">
+            <?php
+                require 'sqlconnect.php';
+
+                $sql = 'SELECT * 
+                    FROM commentaire 
+                    /*AND projet.id_categorie=1;*/
+                ';
+                $table = $connection->query($sql);
+                while ($ligne = $table->fetch()) {
+                    echo $ligne["commentaire_description"];                    
+                }
+            ?>
+        </p>
         
     </div>
     <div style="text-align: center">
@@ -129,6 +137,7 @@
             }
         ?>
         </p>
+
         <div style="margin-top: -15px">
             <!--Changer juste checked par not_checked pour enelever une étoile-->
             <span class="fa fa-star checked"></span>
@@ -138,5 +147,30 @@
             <span class="fa fa-star not_checked"></span>
         </div>
     </div>
+
+    <div class="container" style="margin-top: 100px">
+        <div class="row" style="text-align: center">
+                <h2>MON BLOG</h2>
+                <br>
+                <p style="color: gray">
+                    Mes avis sur les derenières tendances du Web 
+                </p>
+
+
+                <!--Récupération card blog-->
+                <?php
+                    require 'sqlconnect.php';
+
+                    $sql = 'SELECT * 
+                        FROM apropos 
+                    ';
+                    $table = $connection->query($sql);
+                    while ($ligne = $table->fetch()) {
+                        echo $ligne["apropos_description"];                    
+                    }
+                ?>               
+    </div>
+
+
 </body>
 </html>
