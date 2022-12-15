@@ -37,7 +37,7 @@
                                 echo "<div class=\"col-4\">";
 
                                     echo "<div class=\"card\" style=\"width: 25rem;\">";
-                                        echo '<img class=\"card-img-top img_card\" src="'.$ligne["projet_photo"].'"/>';
+                                        echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
                                         echo "<div class=\"card-body\">";
                                             echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
                                             echo "<div class=\"card-title row\">";
@@ -68,7 +68,7 @@
                 <h2>À PROPOS...</h2>
                 <h1>QUI SUIS-JE ?</h1>
                 <br>
-                <p>
+                <p style="color: gray;">
                 <!--Récupération description a propos-->
                 <?php
                     require 'sqlconnect.php';
@@ -152,7 +152,6 @@
     <div class="container" style="margin-top: 100px">
         <div >
                 <h2 style="text-align: center" >MON BLOG</h2>
-                <br>
                 <p style="color: gray; text-align: center;">
                     Mes avis sur les derenières tendances du Web 
                 </p>
@@ -164,7 +163,7 @@
 
                     $sql = 'SELECT * 
                         FROM article
-                        ORDER BY article_date DESC
+                        ORDER BY article_date DESC LIMIT 3
 
                     ';
                     echo "<div class=\"row\">";
@@ -195,4 +194,7 @@
 
 
 </body>
+<?php
+require "footer.php";
+?>
 </html>
