@@ -6,4 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordskills 2022</title>
     <link href="bootstrap-5.2.3-dist\css\bootstrap.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
 </head>
