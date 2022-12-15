@@ -21,7 +21,8 @@ ul li a:hover {
 }
 
 h2{
-    font-weight: bold;    
+    font-weight: bold;
+    font-size: 50px;    
 }
 
 h1{
@@ -48,4 +49,37 @@ a {
     padding-right: 30px;
     background-color: gray;
     transition: 0.6s;
+}
+
+#blog{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: white;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.img_blog {
+    background-image: url(photo.jpg);
+    width : 100px; height : 100px;
+    border-radius : 75px;
+    text-align:center;
+    margin:auto;
+    display:flex;
+    margin-top: 50px;
+    object-fit: cover;
+    margin-top: -70px;
+ }
+
+ #profession_commentaire{
+    margin-top: -20px;
+    font-size: 14px;
+ }
+
+.checked {
+    color: rgb(44, 44, 44);
+}
+
+.not_checked {
+    color: gray;
 }

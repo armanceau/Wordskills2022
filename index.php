@@ -75,14 +75,68 @@
                 volutpat at libero pretium, aliquet consequat sem.                
                 </p>
                 <button type="button" class="rounded-pill bouton_contact"><a href="#"style="color:white">CONTACT</a></button>
-            </div>
-            
+            </div>       
         </div>
-        
-        
-        
-
     </div>
     
+    <div class="container" style="margin-top: 100px; text-align:center; background-color:rgb(44, 44, 44);">
+    <!--Récupération description commentaire-->
+    <p id="blog">
+        <?php
+            require 'sqlconnect.php';
+
+            $sql = 'SELECT * 
+                FROM commentaire 
+                /*AND projet.id_categorie=1;*/
+            ';
+            $table = $connection->query($sql);
+            while ($ligne = $table->fetch()) {
+                echo $ligne["commentaire_description"];                    
+            }
+        ?>
+    </p>
+        
+    </div>
+    <div style="text-align: center">
+        <img class ="img_blog"src="assets\images\lena.jpg"/>
+
+        <!--Récupération Nom auteur-->
+        <p style="font-weight:bold">
+        <?php
+            require 'sqlconnect.php';
+
+            $sql = 'SELECT * 
+                FROM commentaire 
+            ';
+            $table = $connection->query($sql);
+            while ($ligne = $table->fetch()) {
+                echo $ligne["commentaire_nom"];                    
+            }
+        ?>
+        </p>
+
+        <!--Récupération profession auteur-->
+        <p id="profession_commentaire" style="font-style: italic;">
+        <?php
+            require 'sqlconnect.php';
+
+            $sql = 'SELECT * 
+                FROM commentaire 
+            ';
+            $table = $connection->query($sql);
+            while ($ligne = $table->fetch()) {
+                echo $ligne["commentaire_profession"];                    
+            }
+        ?>
+        </p>
+        <div style="margin-top: -15px">
+            <!--Changer juste checked par not_checked pour enelever une étoile-->
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star not_checked"></span>
+            <span class="fa fa-star not_checked"></span>
+        </div>
+    </div>
 </body>
 </html>
