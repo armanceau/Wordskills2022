@@ -37,7 +37,7 @@
                                 echo "<div class=\"col-4\">";
 
                                     echo "<div class=\"card\" style=\"width: 25rem;\">";
-                                        echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
+                                        echo '<img class=\"card-img-top img_card\" src="'.$ligne["projet_photo"].'"/>';
                                         echo "<div class=\"card-body\">";
                                             echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
                                             echo "<div class=\"card-title row\">";
@@ -50,6 +50,7 @@
                                             echo "</div>";
                                         echo "</div>";
                                     echo "</div>";
+                                    echo "<br>";
                             echo "</div>";
                     
                     }
