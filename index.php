@@ -18,44 +18,42 @@
     <br>
     <div class="container">
         <form method="POST">
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>
+                <?php
+                    require 'sqlconnect.php';
 
-            <?php
-                require 'sqlconnect.php';
+                    $sql = 'SELECT * 
+                        FROM projet, categorie 
+                        WHERE projet.id_categorie=categorie.id_categorie
+                        /*AND projet.id_categorie=1;*/
+                    
+                    ';
+                    echo "<div class=\"row\">";
+                    $table = $connection->query($sql);
+                    while ($ligne = $table->fetch()) {
+                            $title = $ligne['projet_title'];
+                            $annee = $ligne['projet_annee'];
 
-                $sql = 'SELECT * 
-                    FROM projet, categorie 
-                    WHERE projet.id_categorie=categorie.id_categorie
-                    /*AND projet.id_categorie=1;*/
-                
-                ';
-                $table = $connection->query($sql);
-                while ($ligne = $table->fetch()) {
-                        $title = $ligne['projet_title'];
-                        $annee = $ligne['projet_annee'];
-                        echo "<div class=\"card\" style=\"width: 18rem;\">";
-                            echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
-                            echo "<div class=\"card-body\">";
-                                echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
-                                echo "<div class=\"card-title row\">";
+                            
+                                echo "<div class=\"col-4\">";
 
-                                    echo "<div class=\"col-8\" style=\"font-weight: bold\">".$ligne["projet_title"];
+                                    echo "<div class=\"card\" style=\"width: 18rem;\">";
+                                        echo '<img class=\"card-img-top\" src="'.$ligne["projet_photo"].'"/>';
+                                        echo "<div class=\"card-body\">";
+                                            echo "<p class=\"card-text\">".$ligne["projet_type"]."</p>";
+                                            echo "<div class=\"card-title row\">";
+
+                                                echo "<div class=\"col-8\" style=\"font-weight: bold\">".$ligne["projet_title"];
+                                                echo "</div>";
+
+                                                echo "<div class=\"col-4\" style=\"font-weight: bold\">".$ligne["projet_annee"];
+                                                echo "</div>";
+                                            echo "</div>";
+                                        echo "</div>";
                                     echo "</div>";
-
-                                    echo "<div class=\"col-4\" style=\"font-weight: bold\">".$ligne["projet_annee"];
-                                    echo "</div>";
-                                echo "</div>";
-                        echo "</div>";
-                        echo "</br>";
-                
-                }
-            ?>
+                            echo "</div>";
+                    
+                    }
+                ?>
         </form>
     </div>
     
@@ -76,7 +74,7 @@
                 rhoncus dui dictum id. Aliquam eros dui, vulputate et neque quis, tempor condimentum turpis. Nunc erat arcu, 
                 volutpat at libero pretium, aliquet consequat sem.                
                 </p>
-                <button type="button" class="btn btn-dark rounded-pill bouton_contact">Contact</button>
+                <button type="button" class="rounded-pill bouton_contact"><a href="#"style="color:white">CONTACT</a></button>
             </div>
             
         </div>

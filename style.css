@@ -1,4 +1,4 @@
-@import url(assets\montserrat-webfont\webfonts\Montserrat-Light.woff);
+@import url('assets\montserrat-webfont\webfonts\Montserrat-Light.woff');
 
 ul{
     margin-right: 16px;
@@ -30,3 +30,22 @@ h1{
     color: rgb(163, 162, 162);
 }
 
+a {
+    text-decoration:none;
+}
+
+.bouton_contact{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(44, 44, 44); 
+    border-color: rgb(44, 44, 44);
+}
+
+.bouton_contact:hover{
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: gray;
+    transition: 0.6s;
+}
