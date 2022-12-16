@@ -16,7 +16,7 @@
 
     <br>
 
-    <div class="container">
+    <div class="container" id="projet">
         <form method="POST">
                 <?php
                     require 'sqlconnect.php';
@@ -59,7 +59,7 @@
     </div>
     
 
-    <div class="container" style="margin-top: 100px">
+    <div class="container" style="margin-top: 100px" id="apropos">
         <div class="row">
             <div class="col-6">
                 <img src="assets\images\undraw_Designer_by46.svg"/>
@@ -149,9 +149,9 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: 100px">
+    <div class="container" style="margin-top: 100px" id="blog">
         <div >
-                <h2 style="text-align: center" >MON BLOG</h2>
+                <h2 style="text-align: center; color:rgb(44, 44, 44);" >MON BLOG</h2>
                 <p style="color: gray; text-align: center;">
                     Mes avis sur les derenières tendances du Web 
                 </p>
@@ -195,7 +195,7 @@
     <div class="popup" id="popup">
         <form class="container" id="container">
             <div class="row" id="row">
-                <div class="col-6" style="background-color: white;padding-bottom: 50px;">
+                <div class="col-6" style="background-color: white;padding-bottom: 15px;">
                     <div style="margin-left:20px;">
                         <h1 style="margin-top:10px;">CONTACT</h1>
                         <h4 style="font-size: 15px; ">APPELEZ-MOI OU ENVOYEZ-MOI UN MAIL</h4>

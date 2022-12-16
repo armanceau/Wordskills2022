@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <footer>
-        <div class="row" style="padding-top: 10px;">
+        <div class="row" style="padding-top: 10px; margin-top:100px;">
             <div class="col-6">
                 <div class="row">
                     <div class="col-5" style="margin-right:-40px;margin-left:20px;">

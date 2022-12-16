@@ -74,7 +74,6 @@ a:hover{
 }
 
 .img_blog {
-    background-image: url(photo.jpg);
     width : 100px; height : 100px;
     border-radius : 75px;
     text-align:center;
@@ -227,6 +226,7 @@ footer {
     color: rgb(44, 44, 44);
     text-transform: uppercase;
     margin: 1rem;
+    font-weight:bold;
 }
 
 .a_header {
@@ -251,4 +251,10 @@ footer {
     width: 100%;
 
 }
+
+.img_header_p {
+    width : 70px; height : 70px;
+    border-radius : 75px;
+    display:flex;
+ }
 
