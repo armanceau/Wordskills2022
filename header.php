@@ -39,7 +39,7 @@
                         <a href="#blog"  class="a_header">BLOG</a>
                     </div>
                     <div class="col-3">
-                        <button type="button" class="rounded-pill bouton_contact_header" style="margin-top: -50px; font-weight:bold; color:rgb(44, 44, 44);">CONTACT</button>
+                        <button type="button" class="rounded-pill bouton_contact_header" style="margin-top: -50px; font-weight:bold; ">CONTACT</button>
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                         <img width="35" height="35" style="margin-left: 5px;" src="assets\images\icons2\twitter3.png">
                     </a>                
                 </div>
-                <button type="button" style="margin-top:25px; font-weight:bold; color:rgb(44, 44, 44);" class="rounded-pill bouton_contact_header">CONTACT</button>
+                <button type="button" style="margin-top:25px; font-weight:bold; " class="rounded-pill bouton_contact_header">CONTACT</button>
             </div>
 
             <div class="col-6">

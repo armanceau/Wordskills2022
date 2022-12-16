@@ -209,8 +209,8 @@ footer {
     background-color: white; 
     border-style: ridge;
     border-width: 2px;
-    border-color: #6a6a6b;
-    color: #6a6a6b;
+    border-color: rgb(44, 44, 44);
+    color: rgb(44, 44, 44);
 }
 
 .bouton_contact_header:hover{
@@ -257,4 +257,5 @@ footer {
     border-radius : 75px;
     display:flex;
  }
+
 
