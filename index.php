@@ -214,13 +214,15 @@
                                 <form>
                                     <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label" style="font-size: 12px;">Adresse e-mail</label>
-                                    <input type="email" class="form-control rounded-pill" style="font-size: 10px;" placeholder="Adresse e-mail">
+                                    <input type="email" name="mail" id="Mail" class="form-control rounded-pill" style="font-size: 10px;" placeholder="Adresse e-mail" onfocusout="verifMail()">
+                                    <div id ="erreurMail"></div>
                                     </div>
                                     <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label" style="font-size: 12px;">Contenu</label>
-                                    <textarea name="textarea" class=" rounded" style="width:355px;height:250px;font-size: 10px;" placeholder="Contenu"></textarea>
+                                    <textarea name="contenu" id="Contenu" class="rounded" style="width:355px;height:250px;font-size: 10px;" placeholder="Contenu" onfocusout="verifContenu()"></textarea>
+                                    <div id ="erreurContenu"></div>
                                     </div>
-                                    <button type="submit" class="btn btn-dark rounded-pill" style="margin-left: 265px;">ENVOYER</button>
+                                    <button type="submit" disabled="true" id="button1" class="btn btn-dark rounded-pill" style="margin-left: 265px;">ENVOYER</button>
                                 </form>
                             </div>
                             <div class="col-2"></div>

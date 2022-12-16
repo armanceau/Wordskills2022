@@ -7,7 +7,6 @@
     <link href="bootstrap-5.2.3-dist\css\bootstrap.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js" async></script>
 </head>
 <footer>
         <div class="row" style="padding-top: 10px;">

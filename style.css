@@ -201,3 +201,54 @@ footer {
 #image_popup{
     background-image: url("assets/images/popup-1.jpg");
 }
+
+.bouton_contact_header{
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white; 
+    border-style: ridge;
+    border-width: 2px;
+    border-color: #6a6a6b;
+    color: #6a6a6b;
+}
+
+.bouton_contact_header:hover{
+    background-color: rgb(44, 44, 44); 
+    border-color: white;
+    border-width: 2px;
+    border-style: ridge;
+    transition: 0.6s;
+    color: white;
+}
+
+.a_header {
+    color: rgb(44, 44, 44);
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.a_header {
+    text-decoration: none;
+    position: relative;
+}
+
+
+.a_header::before {
+    content: "";
+    background-color: rgb(44, 44, 44);
+    transition: 0.4s ease-out;
+    width: 0%;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: -3px
+}
+
+.a_header:hover::before{
+    width: 100%;
+
+}
+
