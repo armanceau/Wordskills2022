@@ -36,7 +36,7 @@
                         <a href="#apropos"  class="a_header">À PROPOS</a>
                     </div>
                     <div class="col-3">
-                        <a href="#blog"  class="a_header">BLOG</a>
+                        <a href="#blog1"  class="a_header">BLOG</a>
                     </div>
                     <div class="col-3">
                         <button type="button" class="rounded-pill bouton_contact_header" style="margin-top: -50px; font-weight:bold; ">CONTACT</button>

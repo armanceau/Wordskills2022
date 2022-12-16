@@ -80,9 +80,7 @@ a:hover{
     margin:auto;
     display:flex;
     margin-top: 50px;
-    object-fit: cover;
     margin-top: -70px;
-    border-color: gray;
     border-width: 5px;
     border-style: ridge;
     
