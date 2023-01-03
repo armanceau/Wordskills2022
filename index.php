@@ -17,7 +17,7 @@
     <br>
 
     <div class="container" id="projet">
-        <form method="POST">
+        <form method="GET">
                 <?php
                     require 'sqlconnect.php';
 
